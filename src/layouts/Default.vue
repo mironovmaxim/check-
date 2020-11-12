@@ -4,26 +4,29 @@
     <main class="content">
       <router-view />
     </main>
+    <Foo title="Итого"/>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Foo from '@/components/Foo'
 export default {
   name: 'default',
   components: {
-    Navbar
+    Navbar,
+    Foo
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 .wrapper {
-  // display: flex;
   position: relative;
 }
 
 .content {
-  padding-left: 50px;
+  padding-top: 20px;
+  padding-left: 65px;
 }
 </style>

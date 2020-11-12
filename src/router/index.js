@@ -12,6 +12,12 @@ const routes = [
     component: Active
   },
   {
+    path: '/auth',
+    name: 'Auth',
+    meta: { layout: 'auth' },
+    component: () => import('../views/Login.vue')
+  },
+  {
     path: '/liabilities',
     name: 'Liabilities',
     meta: { layout: 'default' },

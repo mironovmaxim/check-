@@ -5,7 +5,7 @@
       <router-link to="/liabilities" exact-active-class="active" class="menu__item">Пассивы</router-link>
       <router-link to="/capital" exact-active-class="active" class="menu__item">Капитал</router-link>
       <button class="menu__button">
-        FontAwesome
+        <font-awesome-icon icon="plus" />
       </button>
     </nav>
   </div>
@@ -17,12 +17,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 .wrapper-nav {
   position: fixed;
   height: 100vh;
   width: 50px;
   background-color: #505050;
+  z-index: 2;
 }
 .menu {
   margin: 0;
@@ -40,7 +41,6 @@ export default {
   // margin-top: 50px;
   writing-mode:vertical-rl;
   position: relative;
-  font-family: 'Roboto', sans-serif;
 }
 
 .active::before {
@@ -56,8 +56,11 @@ export default {
 
 .menu__button {
   border: none;
+  border-radius: 50%;
   background-color: #A2CBFD;
   width: 35px;
   height: 35px;
+  color: #ffffff;
+  margin-left: 7px;
 }
 </style>
