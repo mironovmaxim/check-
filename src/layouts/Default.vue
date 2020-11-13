@@ -2,7 +2,9 @@
   <div class="wrapper">
     <Navbar />
     <main class="content">
-      <router-view />
+      <transition name="component-fade">
+        <router-view />
+      </transition>
     </main>
     <Foo title="Итого"/>
   </div>
@@ -28,5 +30,12 @@ export default {
 .content {
   padding-top: 20px;
   padding-left: 65px;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .2s ease-in;
+}
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
 }
 </style>

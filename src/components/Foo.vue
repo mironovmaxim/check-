@@ -16,11 +16,17 @@ export default {
 
 <style lang="scss">
 .footer {
+  display: flex;
+  align-items: center;
   padding-left: 65px;
-  background: #3568A4;
+  background: #A2CBFD;
   width: calc(100vw - 50px);
   height: 55px;
   position: fixed;
   bottom: 0;
+}
+
+.footer__title {
+
 }
 </style>

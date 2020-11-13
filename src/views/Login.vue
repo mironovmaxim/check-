@@ -37,7 +37,7 @@ export default {
   border-radius: 2px;
   background: none;
   color: #FFFFFF;
-  padding: 10px 0 10px 12px;
+  padding: 10px 10px 10px 12px;
 
   &::placeholder {
     color: #FFFFFF;
@@ -49,7 +49,6 @@ export default {
   width: 100px;
   height: 40px;
   border-radius: 4px;
-  // background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   background: #7AAAB9;
 }
