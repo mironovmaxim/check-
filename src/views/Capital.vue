@@ -5,14 +5,16 @@
         Результаты каждого месяца
       </p>
       <ul class="period__items">
-        <li class="period_item">Активы 100 000</li>
-        <li class="period_item">Пассивы 35 000</li>
+        <li class="period_item">
+          <span>Активы</span>
+          <span>100 000</span>
+        </li>
+        <li class="period_item">
+          <span>Пассивы</span>
+          <span>35 000</span>
+        </li>
       </ul>
     </article>
-    <footer class="total">
-      <p class="total__text">Итого</p>
-      <p class="total__number">100 000</p>
-    </footer>
   </div>
 </template>
 

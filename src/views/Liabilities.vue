@@ -5,8 +5,14 @@
         Период с 10 по 15 числа месяца
       </p>
       <ul class="period__items">
-        <li class="period_item">Ипотека 15 000</li>
-        <li class="period_item">Еда 15 000</li>
+        <li class="period_item">
+          <span>Ипотека</span>
+          <span>15 000</span>
+        </li>
+        <li class="period_item">
+          <span>Еда</span>
+          <span>15 000</span>
+        </li>
       </ul>
     </article>
     <article class="period">
@@ -14,14 +20,16 @@
         Период с 20 по 25 числа месяца
       </p>
       <ul class="period__items">
-        <li class="period_item">Бензин 3 000</li>
-        <li class="period_item">Бензин 3 000</li>
+        <li class="period_item">
+          <span>Бензин</span>
+          <span>3 000</span>
+        </li>
+        <li class="period_item">
+          <span>Бензин</span>
+          <span>3 000</span>
+        </li>
       </ul>
     </article>
-    <footer class="total">
-      <p class="total__text">Итого</p>
-      <p class="total__number">100 000</p>
-    </footer>
   </div>
 </template>
 

@@ -18,7 +18,7 @@ export default {
 .footer {
   display: flex;
   align-items: center;
-  padding-left: 65px;
+  padding-left: 75px;
   background: #A2CBFD;
   width: calc(100vw - 50px);
   height: 55px;

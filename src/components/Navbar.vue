@@ -16,10 +16,9 @@
         <font-awesome-icon icon="chart-pie"  />
         <span class="menu__name">Капитал</span>
       </router-link>
-      <!-- <button class="menu__button" @click="$emit('click-add')">
+      <button class="menu__button" @click="$emit('click-add')">
         <font-awesome-icon icon="plus" />
-      </button> -->
-      <!-- <span>Пассивы</span> -->
+      </button>
     </nav>
   </div>
 </template>
