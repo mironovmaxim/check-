@@ -28,6 +28,12 @@ const routes = [
     name: 'Capital',
     meta: { layout: 'default' },
     component: () => import('../views/Capital.vue')
+  },
+  {
+    path: '/add',
+    name: 'Add',
+    meta: { layout: 'default' },
+    component: () => import('../views/Add.vue')
   }
 ]
 

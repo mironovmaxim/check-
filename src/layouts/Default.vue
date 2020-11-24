@@ -26,8 +26,12 @@ export default {
 }
 
 .content {
-  padding-right: 20px;
+  padding-right: 15px;
   padding-top: 20px;
   padding-left: 75px;
+
+  @media (max-width: 360px) {
+    padding-left: 60px;
+  }
 }
 </style>

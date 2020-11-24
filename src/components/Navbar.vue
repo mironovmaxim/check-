@@ -5,20 +5,22 @@
         <font-awesome-icon icon="arrow-circle-right" />
       </button>
       <router-link to="/" exact-active-class="active" class="menu__item">
-        <font-awesome-icon icon="hand-holding-usd" />
-        <span class="menu__name">Доходы</span>
+        <font-awesome-icon  icon="hand-holding-usd" @click="isOpenMenu=false"/>
+        <span class="menu__name" @click="isOpenMenu=false">Доходы</span>
       </router-link>
       <router-link to="/liabilities" active-class="active" class="menu__item">
-        <font-awesome-icon icon="credit-card"  />
-        <span class="menu__name">Платежи</span>
+        <font-awesome-icon icon="credit-card" @click="isOpenMenu=false" />
+        <span class="menu__name" @click="isOpenMenu=false">Платежи</span>
       </router-link>
       <router-link to="/capital" active-class="active" class="menu__item">
-        <font-awesome-icon icon="chart-pie"  />
-        <span class="menu__name">Капитал</span>
+        <font-awesome-icon icon="chart-pie" @click="isOpenMenu=false" />
+        <span class="menu__name" @click="isOpenMenu=false">Капитал</span>
       </router-link>
-      <button class="menu__button" @click="$emit('click-add')">
-        <font-awesome-icon icon="plus" />
-      </button>
+      <router-link to="/add">
+        <button class="menu__button" @click="$emit('click-add')">
+          <font-awesome-icon icon="plus" />
+        </button>
+      </router-link>
     </nav>
   </div>
 </template>
@@ -48,6 +50,10 @@ export default {
   transition: width 0.5s ease-in-out;
   overflow: hidden;
 
+  @media (max-width: 360px) {
+    width: 45px;
+  }
+
   &.open {
     width: 200px;
     transition: width 0.5s ease-in-out;
@@ -69,6 +75,11 @@ export default {
   font-size: 35px;
   transition: transform 0.5s ease-in-out;
   outline: none;
+
+  @media (max-width: 360px) {
+    width: 45px;
+    height: 60px;
+  }
 }
 
 .iconClose {
@@ -91,6 +102,10 @@ export default {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
+  @media (max-width: 360px) {
+    padding: 15px 7px 15px 7px;
+  }
+
   & span {
     padding-left: 25px;
     font-size: 20px;
@@ -112,5 +127,7 @@ export default {
   width: 35px;
   height: 35px;
   color: #ffffff;
+  margin-left: 11px;
+  margin-top: 50px;
 }
 </style>
