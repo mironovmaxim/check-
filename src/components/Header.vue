@@ -1,19 +1,25 @@
 <template>
   <header class="header">
     <div class="wrapper-header">
-      <h1 class="header__title">Планирование</h1>
+      <h1 class="header__title">{{title}}</h1>
       <span class="header__avatar">
         <!-- <img src="" alt="Ваш аватар"> -->
       </span>
     </div>
-    <p class="header__mounth">{{data}}</p>
+    <p v-if="mounth" class="header__mounth">{{date}}</p>
   </header>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String
+    },
+    mounth: Boolean
+  },
   computed: {
-    data () {
+    date () {
       const options = { month: 'long' }
       const mount = new Intl.DateTimeFormat('ru-RU', options).format(new Date())
       return mount.charAt(0).toUpperCase() + mount.slice(1)

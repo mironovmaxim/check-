@@ -1,26 +1,23 @@
 <template>
   <div class="wrapper-content">
-    <article class="period">
-      <p class="period__title">
-        Результаты каждого месяца
+    <article class="total">
+      <p class="total__title">
+        Итоги месяца
       </p>
-      <ul class="period__items">
-        <li class="period_item">
-          <span>Активы</span>
-          <span>100 000</span>
-        </li>
-        <li class="period_item">
-          <span>Пассивы</span>
-          <span>35 000</span>
-        </li>
-      </ul>
+      <TotalList />
+      <Balance />
     </article>
   </div>
 </template>
 
 <script>
+import TotalList from '@/components/Capital/TotalList'
+import Balance from '@/components/Capital/Balance'
 export default {
-
+  components: {
+    TotalList,
+    Balance
+  }
 }
 </script>
 

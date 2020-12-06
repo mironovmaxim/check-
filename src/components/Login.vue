@@ -13,15 +13,11 @@ export default {
 
 <style lang="scss">
 .form {
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 182px;
+  margin: 0 auto;
   background-color: #444368;
   border-radius: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -180px;
-  margin-top: -111px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +25,8 @@ export default {
 }
 
 .form__input {
-  width: 300px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
   height: 40px;
   box-sizing: border-box;
   border-radius: 20px;

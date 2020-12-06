@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <Navbar />
-    <Header />
+    <Header title="Планирование" mounth/>
     <main class="content">
         <router-view />
     </main>
@@ -23,5 +23,9 @@ export default {
 <style lang="scss" scope>
 .wrapper {
   padding: 30px 30px 0px 30px;
+}
+
+.content {
+  padding-bottom: 100px;
 }
 </style>

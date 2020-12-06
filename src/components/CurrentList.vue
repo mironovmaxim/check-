@@ -1,24 +1,52 @@
 <template>
     <article class="current-list">
       <p class="current-list__title">
-        Текущие активы
+        {{title}}
       </p>
       <ul class="current-list__items">
-        <li class="current-list_item">
-          <span>Максим</span>
-          <span>40 000 ₽</span>
-        </li>
-        <li class="current-list_item">
-          <span>Анастасия</span>
-          <span>20 000 ₽</span>
+        <li v-for="item in items" :key="item.id" class="current-list_item item">
+          <span>{{item.name}}</span>
+          <div class="item__footer">
+            <span class="item__amount">{{item.amount | bitness}} ₽</span>
+            <toggle v-if="toggle"/>
+          </div>
         </li>
       </ul>
     </article>
 </template>
 
 <script>
+import Toggle from '@/components/ui/Toggle'
 export default {
-
+  props: {
+    title: {
+      type: String,
+      default: function () {
+        return 'Заголовок'
+      }
+    },
+    toggle: {
+      type: Boolean,
+      default: function () {
+        return false
+      }
+    },
+    items: {
+      type: Array,
+      default: function () {
+        return []
+      }
+    }
+  },
+  components: {
+    Toggle
+  },
+  filters: {
+    bitness: function (value) {
+      if (!value) return ''
+      return value.toLocaleString('ru')
+    }
+  }
 }
 </script>
 
@@ -42,11 +70,21 @@ export default {
   justify-content: center;
   margin-bottom: 12px;
   padding-left: 18px;
+  padding-right: 18px;
   box-sizing: border-box;
 
   & span {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  & .item__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .item__amount {
+    font-size: 14px;
   }
 }
 

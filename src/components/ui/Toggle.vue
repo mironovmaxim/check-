@@ -23,26 +23,26 @@ export default {
 .item__toggle {
   flex-shrink: 0;
   position: relative;
-  width: 40px;
-  height: 21px;
+  width: 35px;
+  height: 19px;
   background-color: #FFFFFF;
   border-radius: 10px;
 }
 
 .item__ball {
   position: absolute;
-  top: 2px;
+  top: 1px;
   left: 2px;
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background-color: #F87979;
-  transition: transform 0.3s ease, background-color 0.2s ease;
+  background-color: #F25415;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 
   &.on {
-    transform: translateX(19px);
-    background-color: #8BD95B;
-    transition: transform 0.3s ease, background-color 0.2s ease;
+    transform: translateX(14px);
+    background-color: #0AD674;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
 }
 </style>

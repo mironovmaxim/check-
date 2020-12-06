@@ -1,7 +1,10 @@
 <template>
   <div class="wrapper-content">
     <period />
-    <current-list />
+    <current-list
+      title="Текущие активы"
+      :items="active"
+      />
   </div>
 </template>
 
@@ -12,6 +15,11 @@ export default {
   components: {
     Period,
     CurrentList
+  },
+  computed: {
+    active () {
+      return this.$store.getters.active
+    }
   }
 }
 </script>
