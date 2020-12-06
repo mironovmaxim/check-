@@ -1,5 +1,6 @@
 <template>
   <div class="content__auth">
+    <h1 class="title__auth">Привет, <br> давай <br> авторизируемся</h1>
     <slot/>
   </div>
 </template>
@@ -11,10 +12,17 @@ export default {
 </script>
 
 <style lang="scss">
+.title__auth {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
 .content__auth {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background:  linear-gradient(180deg, rgba(16, 64, 136, 0.71) 0%, rgba(67, 180, 146, 0.49) 53%, rgba(97, 145, 216, 0.7) 100%), #FFFFFF;
+  background-color: #272240;
+  padding: 30px;
 }
 </style>

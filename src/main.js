@@ -7,24 +7,22 @@ import Default from './layouts/Default.vue'
 import Auth from './layouts/Auth.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
+  faSignOutAlt,
+  faDonate,
+  faWallet,
+  faCoins,
   faPlus,
-  faRubleSign,
-  faHandHoldingUsd,
-  faCreditCard,
-  faChartPie,
-  faArrowCircleRight,
-  faArrowCircleLeft
+  faRubleSign
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(
+  faSignOutAlt,
+  faDonate,
+  faWallet,
+  faCoins,
   faPlus,
-  faRubleSign,
-  faHandHoldingUsd,
-  faCreditCard,
-  faChartPie,
-  faArrowCircleRight,
-  faArrowCircleLeft
+  faRubleSign
 )
 
 Vue.component('default', Default)

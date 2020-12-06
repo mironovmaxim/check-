@@ -1,44 +1,20 @@
 <template>
   <div class="wrapper-content">
-    <article class="period">
-      <p class="period__title">
-        Период с 10 по 15 числа месяца
-      </p>
-      <ul class="period__items">
-        <li class="period_item">
-          <span>Максим</span>
-          <span>40 000</span>
-        </li>
-        <li class="period_item">
-          <span>Анастасия</span>
-          <span>11 000</span>
-        </li>
-      </ul>
-    </article>
-    <article class="period">
-      <p class="period__title">
-        Период с 20 по 25 числа месяца
-      </p>
-      <ul class="period__items">
-        <li class="period_item">
-          <span>Максим</span>
-          <span>5 000</span>
-        </li>
-        <li class="period_item">
-          <span>Анастасия</span>
-          <span>9 000</span>
-        </li>
-      </ul>
-    </article>
+    <period />
+    <current-list />
   </div>
 </template>
 
 <script>
+import CurrentList from '@/components/CurrentList'
+import Period from '@/components/Period'
 export default {
-
+  components: {
+    Period,
+    CurrentList
+  }
 }
 </script>
 
 <style>
-
 </style>

@@ -2,7 +2,6 @@
   <form class="form">
     <input type="text" class="form__input" placeholder="Логин">
     <input type="password" class="form__input" placeholder="Пароль">
-    <button class="form__button">Войти</button>
   </form>
 </template>
 
@@ -14,15 +13,15 @@ export default {
 
 <style lang="scss">
 .form {
-  width: 350px;
+  width: 400px;
   height: 300px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  background-color: #444368;
+  border-radius: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -175px;
-  margin-top: -150px;
+  margin-left: -180px;
+  margin-top: -111px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,26 +29,20 @@ export default {
 }
 
 .form__input {
-  width: 280px;
-  height: 60px;
-  border: 1px solid #FFFFFF;
+  width: 300px;
+  height: 40px;
   box-sizing: border-box;
-  border-radius: 2px;
-  background: none;
+  border-radius: 20px;
+  background-color: rgba(214, 214, 214, 0.2);
   color: #FFFFFF;
-  padding: 10px 10px 10px 12px;
+  border: none;
+  padding: 12px 0px 11px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 
   &::placeholder {
     color: #FFFFFF;
   }
-}
-
-.form__button {
-  border: none;
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  color: #ffffff;
-  background: #7AAAB9;
 }
 </style>
