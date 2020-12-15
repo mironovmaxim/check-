@@ -9,11 +9,13 @@ export default new Vuex.Store({
     active: [
       {
         id: 1,
+        period: 1,
         name: 'Зарплата Анастасия',
         amount: 20000
       },
       {
         id: 2,
+        period: 2,
         name: 'Зарплата Максим',
         amount: 40000
       }

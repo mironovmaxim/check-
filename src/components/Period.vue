@@ -4,13 +4,15 @@
         Выбери период в месяце
       </p>
       <ul class="period__items">
-        <li class="period_item active">
-          <span>10</span>
-          <span>25</span>
-        </li>
-        <li class="period_item">
-          <span>20</span>
-          <span>25</span>
+        <li
+          v-for="period in items"
+          :key="period.id"
+          class="period__item"
+          :class="{active: selectedPeriod === period}"
+          @click="selectPeriod(period)"
+        >
+          <span>{{period.min_date}}</span>
+          <span>{{period.max_date}}</span>
         </li>
       </ul>
     </article>
@@ -18,7 +20,29 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      selectedPeriod: null,
+      items: [
+        {
+          id: 1,
+          min_date: 10,
+          max_date: 15
+        },
+        {
+          id: 2,
+          min_date: 15,
+          max_date: 25
+        }
+      ]
+    }
+  },
+  methods: {
+    selectPeriod (period) {
+      this.selectedPeriod = period
+      this.$emit('selectPeriod', { id: period.id })
+    }
+  }
 }
 </script>
 
@@ -40,13 +64,14 @@ export default {
   display: flex;
 }
 
-.period_item {
+.period__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50px;
   height: 50px;
+  box-sizing: border-box;
   background: rgba(68, 67, 104, 0.25);
   border-radius: 15px;
   margin-right: 20px;

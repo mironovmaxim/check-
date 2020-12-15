@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-content">
-    <period />
+    <period @selectPeriod="getLiabilities"/>
     <current-list
       title="Текущие платежи"
       toggle
@@ -20,6 +20,11 @@ export default {
   computed: {
     liabilities () {
       return this.$store.state.liabilities
+    }
+  },
+  methods: {
+    getLiabilities ({ id }) {
+      console.log(id)
     }
   }
 }
