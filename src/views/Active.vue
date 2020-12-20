@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper-content">
-    <period @selectPeriod="getActive"/>
+    <period
+      :items=""
+      @selectPeriod="getActive"
+    />
     <current-list
       title="Текущие активы"
       :items="active"
@@ -16,10 +19,16 @@ export default {
     Period,
     CurrentList
   },
+  data: {
+    periods: []
+  },
   computed: {
     active () {
       return this.$store.getters.active
     }
+  },
+  created () {
+
   },
   methods: {
     getActive ({ id }) {
