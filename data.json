@@ -1,0 +1,64 @@
+{
+  "periods": [
+		{
+			"id": 1,
+			"from": "10",
+			"to": "15"
+		},
+		{
+			"id": 2,
+			"from": "15",
+			"to": "20"
+		},
+		{
+			"id": 3,
+			"from": "20",
+			"to": "25"
+		},
+		{
+			"id": 4,
+			"from": "25",
+			"to": "30"
+		}
+  ],
+  "active": [
+		{
+			"id": 1,
+			"period": 1,
+			"name": "Зарплата Анастасия",
+			"amount": 20000
+		},
+		{
+			"id": 2,
+			"period": 2,
+			"name": "Зарплата Максим",
+			"amount": 40000
+		}
+  ],
+  "liabilities": [
+		{
+			"id": 1,
+			"name": "Ипотека",
+			"amount": 13000,
+			"allocated": false
+		},
+		{
+			"id": 2,
+			"name": "Еда",
+			"amount": 4000,
+			"allocated": false
+		},
+		{
+			"id": 3,
+			"name": "Стрижка",
+			"amount": 300,
+			"allocated": false
+		},
+		{
+			"id": 4,
+			"name": "Бензин",
+			"amount": 3000,
+			"allocated": false
+		}
+	]
+}

@@ -11,8 +11,8 @@
           :class="{active: selectedPeriod === period}"
           @click="selectPeriod(period)"
         >
-          <span>{{period.min_date}}</span>
-          <span>{{period.max_date}}</span>
+          <span>{{period.from}}</span>
+          <span>{{period.to}}</span>
         </li>
       </ul>
     </article>
@@ -20,21 +20,15 @@
 
 <script>
 export default {
+  props: {
+    items: Array,
+    default () {
+      return []
+    }
+  },
   data () {
     return {
-      selectedPeriod: null,
-      items: [
-        {
-          id: 1,
-          min_date: 10,
-          max_date: 15
-        },
-        {
-          id: 2,
-          min_date: 15,
-          max_date: 25
-        }
-      ]
+      selectedPeriod: null
     }
   },
   methods: {
@@ -48,7 +42,7 @@ export default {
 
 <style lang="scss">
 .period {
-  margin-bottom: 47px;
+  margin-bottom: 7px;
 }
 
 .period__title {
@@ -62,6 +56,7 @@ export default {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .period__item {
@@ -75,6 +70,7 @@ export default {
   background: rgba(68, 67, 104, 0.25);
   border-radius: 15px;
   margin-right: 20px;
+  margin-bottom: 20px;
 
   & span {
     font-size: 14px;

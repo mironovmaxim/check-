@@ -14,6 +14,7 @@ export default {
   methods: {
     toggle () {
       this.isToggleOn = !this.isToggleOn
+      this.$emit('changeState', { toggle: this.isToggleOn })
     }
   }
 }

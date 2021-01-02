@@ -14,7 +14,6 @@ import {
   faRubleSign
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { makeApi } from './server'
 import './registerServiceWorker'
 
 library.add(
@@ -31,9 +30,10 @@ Vue.component('auth', Auth)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
-if (process.env.NODE_ENV === 'development') {
-  makeApi()
-}
+Vue.filter('capacity', function (value) {
+  if (!value) return ''
+  return value.toLocaleString('ru')
+})
 
 new Vue({
   router,

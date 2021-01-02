@@ -10,7 +10,7 @@
       <router-link to="/capital" active-class="active" class="menu__item">
         <font-awesome-icon icon="donate"/>
       </router-link>
-      <router-link to="/capital" active-class="active" class="menu__item">
+      <router-link to="/logout" active-class="active" class="menu__item">
         <font-awesome-icon icon="sign-out-alt"/>
       </router-link>
     </nav>
@@ -51,7 +51,7 @@ export default {
   display: flex;
   justify-content: space-between;
   font-size: 27px;
-  color: #ffffff;
+  color: #9593BA;
   max-width: 30px;
   max-height: 30px;
   text-decoration: none;

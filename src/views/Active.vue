@@ -1,11 +1,7 @@
 <template>
   <div class="wrapper-content">
-    <period
-      :items=""
-      @selectPeriod="getActive"
-    />
     <current-list
-      title="Текущие активы"
+      title="Выручка"
       :items="active"
       />
   </div>
@@ -13,22 +9,22 @@
 
 <script>
 import CurrentList from '@/components/CurrentList'
-import Period from '@/components/Period'
 export default {
   components: {
-    Period,
     CurrentList
-  },
-  data: {
-    periods: []
   },
   computed: {
     active () {
-      return this.$store.getters.active
+      return this.$store.state.active
+    },
+    periods () {
+      return this.$store.state.periods
     }
   },
-  created () {
-
+  beforeMount () {
+    this.$store.dispatch('getPeriods')
+    this.$store.dispatch('getActive')
+    this.$store.dispatch('getLiabilities')
   },
   methods: {
     getActive ({ id }) {
